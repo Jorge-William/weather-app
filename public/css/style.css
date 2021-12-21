@@ -1,3 +1,7 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 h1 {
   color: red;
 }
@@ -11,5 +15,6 @@ li {
   display: inline;
 }
 
-ul{
+#messageError{
+  color: red
 }
