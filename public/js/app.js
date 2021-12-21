@@ -1,4 +1,4 @@
-console.log('Client side javascript file is loaded.');
+// console.log('Client side javascript file is loaded.');
 
 // fetch('http://localhost:3000/weather?location=boston').then((response) => {
 // 	response.json().then((data) => {
@@ -13,6 +13,9 @@ console.log('Client side javascript file is loaded.');
 
 const weatherform = document.querySelector('form')
 const input = document.getElementById('locationField')
+const messageLocation = document.getElementById('messageLocation')
+const messageForecast = document.getElementById('messageForecast')
+const messageError = document.getElementById('messageError')
 
 weatherform.addEventListener('submit', (e) => {
 	e.preventDefault()
@@ -22,10 +25,10 @@ weatherform.addEventListener('submit', (e) => {
 	fetch(`http://localhost:3000/weather?location=${location}`).then((response) => {
 		response.json().then((data) => {
 			if (data.error) {
-				console.log(data.error)
+				messageError.textContent = data.error
 			} else {
-				console.log(data.location);
-				console.log(data.forecast);
+				messageLocation.textContent = data.location
+				messageForecast.textContent = data.forecast
 			}
 		})
 	})
