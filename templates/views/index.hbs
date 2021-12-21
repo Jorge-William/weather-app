@@ -11,12 +11,17 @@
 
 <body>
 	{{>header}}
-	<h1>Weather APP</h1>
+	<p>Use this site to get your weather!</p>
 
 	<form>
 		<input type="text" placeholder="Location" id="locationField" />
 		<input type="submit" value="Search" />
 	</form>
+
+	<p id="messageLocation"></p>
+	<p id="messageForecast"></p>
+	<p id="messageError"></p>
+
 	{{>footer}}
 	<script src="./js/app.js"></script>
 </body>
