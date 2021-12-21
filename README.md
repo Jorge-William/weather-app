@@ -9,3 +9,7 @@ With this app you can search the weather conditions on a determined place in the
 - postman Request(api request on backend)
 - fetch() Browser API (api request on frontend)
 - nodemon
+
+
+## Status:
+- **in progress**
