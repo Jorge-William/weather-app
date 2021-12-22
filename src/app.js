@@ -76,7 +76,7 @@ app.get('/help/*', (req, res) => {
 })
 
 app.get('*', (req, res) => {
-	res.send('404 page not found')
+	res.render('404', () => { })
 })
 
 app.listen(port, () => {
